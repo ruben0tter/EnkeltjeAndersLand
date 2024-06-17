@@ -1,0 +1,96 @@
+:root {
+    --primary: #fff;
+    --secondary: #000000;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+}
+
+.contact {
+    height: 70vh;
+    width: 50vw;
+    border-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+   
+}
+
+
+.form{
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.form::before{
+    position: absolute;
+    top: 10%;
+    left: -2.5rem;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 1.4rem solid transparent;
+    border-right: 1.4rem solid var(--secondary);
+}
+
+    .form h1 {
+        color: #fff;
+        font: 500 1.8rem sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form h2 {
+        color: #fff;
+        font: 100 1rem sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.form form {
+    padding:0 2rem;
+}
+
+.form input, .form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: .08rem solid var(--primary);
+    border-radius: 2rem;
+    background-color: unset;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form input:not(:first-child), .form textarea, .form button {
+    margin-top: .8rem;
+}
+
+.form textarea{
+    height: 6rem;
+    resize: none;
+}
+
+.form button{
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    color: #000000;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contactform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contact">
+        <div class="map"></div>
+        <div class="form">
+            <h1>Stuur hier je bevindingen door.</h1>
+            <form id="contact-form" action="/send" method="post" enctype="multipart/form-data">
+                <input type="text" name="naam" id="naam" required placeholder="Naam">
+                <input type="text" name="plaats" id="plaats" required placeholder="Plaats">
+                <input type="file" name="files" id="file" required placeholder="Foto's" accept="image/png, image/jpeg, image/HEIC" multiple><br><br>
+                <textarea name="observatie_tekst" id="observatie" required placeholder="Observatie tekst"></textarea>
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit">Inleveren</button>
+            </form>
+            <h2>DATABASE 768-39/24EA</h2>
+            <h2>Vastlegging Van Verschillende Thuisbasissen</h2>
+            <h2>PLANEET AARDE</h2>
+        </div>
+    </div>
+</body>
+</html>

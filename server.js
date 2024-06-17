@@ -26,15 +26,15 @@ app.post('/send', upload.array('files', 10), (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'ruben.otter3@gmail.com',
-            pass: 'hgcb cgzf ciar iuwk' // Use the generated app password here
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS // Use the generated app password here
         }
     });
 
     // Create email options
     const mailOptions = {
-        from: 'ruben.otter3@gmail.com',
-        to: 'ruben.otter3@gmail.com',
+        from: process.env.EMAIL_USER,
+        to: process.env.EMAIL_USER,
         subject: `Contact Form Submission from ${naam}`,
         text: `Plaats: ${plaats}\nObservatie Tekst: ${observatie_tekst}`,
         attachments: files.map(file => ({

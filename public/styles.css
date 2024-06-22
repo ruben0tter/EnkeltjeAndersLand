@@ -11,7 +11,8 @@
 
 body {
     height: 100vh;
-
+    border-left:50px solid transparent;
+    border-right:50px solid transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,47 +22,52 @@ body {
 .contact {
     height: 70vh;
     width: 50vw;
-    border-radius: 1rem;
     display: flex;
     overflow: hidden;
-   
 }
 
-
 .form{
-    background-color: var(--secondary);
+    width: 420px;
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    border-radius: 12px;
+    padding: 20px, 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
 }
 
-.form::before{
-    position: absolute;
-    top: 10%;
-    left: -2.5rem;
-    content: "";
-    width: 0;
-    height: 0;
-    border: 1.4rem solid transparent;
-    border-right: 1.4rem solid var(--secondary);
-}
 
     .form h1 {
-        color: #fff;
-        font: 500 1.8rem sans-serif;
+        color: #000;
+        font-family: "roc-grotesk-condensed", sans-serif;
+        font-weight: 500;
+        font-style: normal;         
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+        align-items: left;
+        padding: 0 2rem;
+        padding-bottom: 30px;
+        padding-top: 10px;
+        line-height:30px;
     }
 
     .form h2 {
-        color: #fff;
+        color: #000;
         font: 100 1rem sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+        align-items: left;
+        padding: 0 2rem;
+        padding-bottom: 30px;
+        padding-top: 30px;
     }
+
+  .img-star {
+    width: 75px;
+    height: 75px;
+    padding-left: 20px;
+    padding-top: 30px;
+  }
 
 .form form {
     padding:0 2rem;
@@ -73,9 +79,25 @@ body {
     border: .08rem solid var(--primary);
     border-radius: 2rem;
     background-color: unset;
-    color: #fff;
+    color: #000;
     font-size: 1rem;
+    font-family: "roc-grotesk", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-color:#000;
 }
+
+input::file-selector-button {
+    font-weight: bold;
+    font-family: "roc-grotesk", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    padding: 0.5em;
+    border: thin solid rgb(0, 0, 0);
+    border-radius: 20px;
+  }
+  
 
 .form input:not(:first-child), .form textarea, .form button {
     margin-top: .8rem;
@@ -83,14 +105,23 @@ body {
 
 .form textarea{
     height: 6rem;
-    resize: none;
+    resize:none;
+    
 }
 
 .form button{
-    background-color: var(--primary);
+    background-color: var(--secondary);
     padding: 1rem 2rem;
-    color: #000000;
+    color: #ffff;
     border-radius: 2rem;
-    border: none;
+    border: 2px;
     cursor: pointer;
-}
+    font-family: "roc-grotesk-condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;      
+    font-size: 16px;
+    margin-bottom:30px;
+    }
+
+
+

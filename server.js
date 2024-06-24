@@ -63,7 +63,6 @@ app.post('/send', upload.array('files', 10), (req, res) => {
                 if (err) console.error(`Failed to delete file: ${file.path}`, err);
             });
         });
-        //res.status(200).send("Message send succesfully.");
         res.redirect('/submitted');
     });
 });

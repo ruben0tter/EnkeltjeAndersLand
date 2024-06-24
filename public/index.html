@@ -7,28 +7,20 @@
     <title>Contactform</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/khn8tnr.css">
-    <link rel="stylesheet" href="https://use.typekit.net/khn8tnr.css">
 </head>
 <body>
-    <div class="contact">
-        <div class="map"></div>
-        <div class="form">
-            <img class="img-star" src="/images/star.png" alt="star" >
-            <h1>Stuur hier je<br>bevindingen door.</h1>
-            <form id="contact-form" action="/send" method="post" enctype="multipart/form-data">
-                <input type="text" name="naam" id="naam" required placeholder="Naam">
-                <input type="text" name="plaats" id="plaats" required placeholder="Plaats">
-                <input type="file" name="files" id="file" required placeholder="Foto's" accept="image/png, image/jpeg, image/HEIC" multiple><br><br>
-                <textarea name="observatie_tekst" id="observatie" required placeholder="Beschrijvingen"></textarea>
-                <input type="hidden" name="_captcha" value="false">
-                <button id="submitButton" type="submit" @onclick="replace(submitted.html)">Inleveren</button>
-            </form>
-        </div>
     </div>
-    <script>
-        document.getElementById('submitButton').addEventListener('click', function() {
-            window.location.href = '/submitted';
-        });
-    </script>
+    <div class="form">
+        <img class="img-star" src="/images/star.png" alt="star" >
+        <h1>Stuur hier je<br>bevindingen door.</h1>
+        <form id="contact-form" action="/send" method="post" enctype="multipart/form-data">
+            <input type="text" name="naam" id="naam" required placeholder="Naam">
+            <input type="text" name="plaats" id="plaats" required placeholder="Plaats">
+            <input type="file" name="files" id="file" required placeholder="Foto's" accept="image/png, image/jpeg, image/HEIC" multiple><br><br>
+            <textarea name="observatie_tekst" id="observatie" required placeholder="Beschrijvingen"></textarea>
+            <input type="hidden" name="_captcha" value="false">
+            <button id="submitButton" type="submit">Inleveren</button>
+        </form>
+    </div>
 </body>
 </html>
